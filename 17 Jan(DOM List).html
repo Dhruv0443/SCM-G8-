@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>17 Jan(DOM List)</title>
+	<script>
+		function addNewStudent() 
+		{
+			
+			var studentName=document.getElementById('txtStudent').value;
+			var lstElement=document.creatElement("li");
+			lstElement.setAttribute("id",studentName);
+			var lstTextNode=document.createTextNode('studentName');
+
+			lstElement.appendChild('lstTextNode');
+
+			var lstRootElement=document.getElementById('lstStudent');
+			lstRootElement.appendChild('lstElement');
+		}
+
+		function removeStudent()
+		{
+			var studentName=document.getElementById('txtStudent').value;
+			var lstElement=document.getElementById('studentName');
+
+			var lstRootElement=document.getElementById("lstStudent");
+			lstRootElement.appendChild('lstElement');
+
+		}
+		function applyStyle()
+		{
+			var lstRootElement=document.getElementById("lstStudent");
+			lstRootElement.style.color="red";
+			lstRootElement.style.borderStyle="solid";
+			lstRootElement.style.borderColour="blue";
+			lstRootElement.style.borderWidth="2px";
+
+			for (let i = 0
+				;i<=lstRootElement.children.length-1; i =i+1) 
+				{
+					lstRootElement.children[i].style.borderStyle="solid";
+					lstRootElement.children[i].style.borderColour="green";
+					lstRootElement.children[i].style.borderWidth="1px";
+				}
+		}
+		
+
+
+
+	</script>
+</head>
+<body>
+	<ul id="lstStudent" style="list-style: none;padding: 0px;">
+		<li id="Rahul">Rahul</li>
+		<li id="Rohit">Rohit</li>
+		<li id="Sohan">Sohan</li>
+		<li id="Manish">Manish</li>
+	</ul>
+	<input type="text" id="txtStudent"><br/><br/>
+	<button type="button" onclick="addNewStudent()">Add New Student</button>
+	<button type="button" onclick="removeStudent()">Delete Student</button>
+	<button type="button" onclick="applyStyle()">Apply Style</button>
+</body>
+</html>
