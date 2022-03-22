@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-    // int arr[7]={1,2,3,4,5,6,7};
+    
     int m,n,c=0;
     cout << "Enter number of rows : ";
     cin >> m ;
